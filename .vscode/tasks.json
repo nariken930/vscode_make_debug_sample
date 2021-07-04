@@ -1,0 +1,50 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc アクティブなファイルのビルド",
+            "command": "/opt/rh/devtoolset-8/root/usr/bin/gcc",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "デバッガーによって生成されたタスク。"
+        },
+
+        {
+            "label": "my make",
+            "type": "shell",
+            "command": "",
+            "args": [
+                "/opt/rh/devtoolset-8/root/usr/bin/make",
+                "--directory=/opt/work/make_sample"
+            ],
+            "group": "build"
+        },
+
+        {
+            "label": "my make clearn",
+            "type": "shell",
+            "command": "",
+            "args": [
+                "/opt/rh/devtoolset-8/root/usr/bin/make",
+                "--directory=/opt/work/make_sample",
+                "clean"
+            ],
+            "group": "build"
+        },
+    ],
+    "version": "2.0.0"
+}
